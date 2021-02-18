@@ -114,6 +114,9 @@ export const deleteUsuario = async (req: Request, res: Response) => {
             usuario
         })
     } catch (error) {
-        
+        console.log(error);
+        res.status(500).json({
+            msg: `Hable con el administrador`
+        });
     }
 }
